@@ -1,13 +1,19 @@
 <template>
-  <HelloWorld />
+  <div>
+    <Header/>
+    <Cast/>
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import Header from "../components/Header";
+import Cast from "../components/Cast";
 
-  export default {
-    components: {
-      HelloWorld
-    }
+export default {
+  name: "Home",
+  components: {
+    Header,
+    Cast
   }
+};
 </script>
