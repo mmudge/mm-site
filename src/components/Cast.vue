@@ -4,9 +4,16 @@
       <v-flex class="display-2 text-xs-center my-5">Cast and Crew</v-flex>
     </v-layout>
     <v-layout xs12 sm6 md3 offset-sm3>
-      <div v-for="c in cast" :key="c.name">
-        <CastCard :name="c.name" :img="c.img" :role="c.role" :bio="c.bio" :social="c.social"/>
-      </div>
+      <template v-for="c in cast">
+        <CastCard
+          :name="c.name"
+          :img="c.img"
+          :role="c.role"
+          :bio="c.bio"
+          :social="c.social"
+          :key="c.name"
+        />
+      </template>
     </v-layout>
   </v-container>
 </template>
