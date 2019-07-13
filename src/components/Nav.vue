@@ -46,6 +46,7 @@
   color: #09fdd9;
   font-size: 1vw;
   margin-left: 20px;
+  font-weight: 400;
 }
 
 .card-container {
