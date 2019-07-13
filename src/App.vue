@@ -33,6 +33,6 @@ export default {
 #app {
   // background-color: #e0e0e0;
   // background-color: black;
-  // background-color: #212121;
+  // background-color:  #212121;
 }
 </style>

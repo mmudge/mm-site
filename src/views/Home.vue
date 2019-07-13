@@ -1,5 +1,23 @@
 <template>
-  <div>
+  <div class="home">
+    <vue-particles
+      color="#fff"
+      :particleOpacity="0.5"
+      :particlesNumber="55"
+      shapeType="edge"
+      :particleSize="2"
+      linesColor="#fff"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="180"
+      :moveSpeed="1"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+      style="position: fixed; height: 100vh; width: 100vw;"
+    ></vue-particles>
     <v-container class="flex-center header-content">
       <div>
         <p class="line-item line-one">HELLO</p>
@@ -14,12 +32,22 @@
 
 
 <style lang="scss" scoped>
-// color: #e53935;
+//  #e53935;
+//  #673ab7;
+//  #2962ff;
+//   #09FDD9
 
-// color: #673ab7;
-
-// color: #2962ff;
-// #09FDD9
+.home {
+  background-image: linear-gradient(
+      75deg,
+      rgba(#212121, 0.7),
+      50%,
+      rgba(#212121, 0.5)
+    ),
+    url("../assets/homebg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .header-content {
   flex-direction: column;
@@ -28,10 +56,12 @@
   div {
     text-align: center;
     line-height: 0.75;
+    z-index: 1;
 
     .line-item {
       word-spacing: 0px;
       letter-spacing: 0px;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     }
 
     .line-one {

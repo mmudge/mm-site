@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-navigation-drawer app v-model="drawer" class="side-nav" disable-resize-watcher>
+    <v-navigation-drawer
+      app
+      v-model="drawer"
+      style="background-color: transparent;"
+      disable-resize-watcher
+    >
       <v-container class="card-container" fluid>
         <v-layout column justify-center class="card-layout">
           <template v-for="(item, index) in navDropItems">
@@ -15,9 +20,9 @@
 </template>
 
 <style scoped>
-/* .side-nav {
-  background-color: #212121;
-} */
+.side-nav {
+  background-color: transparent;
+}
 
 .card-container {
   height: 100%;
