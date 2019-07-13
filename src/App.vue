@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <Nav :appName="appName" />
     <v-content>
       <router-view />
     </v-content>
@@ -8,17 +7,11 @@
 </template>
 
 <script>
-import Nav from "./components/Nav.vue";
-
 export default {
   name: "App",
-  components: {
-    Nav
-  },
+  components: {},
   data() {
-    return {
-      appName: "Michael Mudge | Web Developer"
-    };
+    return {};
   }
 };
 </script>
@@ -31,8 +24,11 @@ export default {
 }
 
 #app {
-  // background-color: #e0e0e0;
+  // background-color: linear-gradient(90, #f0f0f0;
+  // background-image: linear-gradient(90deg, #212121 90%, 90%, #f0f0f0 20%);
+  // background-image: linear-gradient(180deg, #212121, 80%, #f0f0f0);
   // background-color: black;
-  // background-color:  #212121;
+  // background-color: #212121;
+  background-color: #f0f0f0;
 }
 </style>

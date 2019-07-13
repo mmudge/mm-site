@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div id="home">
+    <HomeNav :appName="appName" />
     <vue-particles
       color="#fff"
       :particleOpacity="0.5"
@@ -37,7 +38,7 @@
 //  #2962ff;
 //   #09FDD9
 
-.home {
+#home {
   background-image: linear-gradient(
       75deg,
       rgba(#212121, 0.7),
@@ -99,8 +100,16 @@
 
 
 <script>
+import HomeNav from "../components/HomeNav.vue";
 export default {
   name: "Home",
-  components: {}
+  components: {
+    HomeNav
+  },
+  data() {
+    return {
+      appName: "Michael Mudge | Web Developer"
+    };
+  }
 };
 </script>
