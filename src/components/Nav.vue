@@ -1,11 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer
-      app
-      v-model="drawer"
-      style="background-color: transparent;"
-      disable-resize-watcher
-    >
+    <div id="side-nav">
       <v-container class="card-container" fluid>
         <v-layout column justify-center class="card-layout">
           <template v-for="(item, index) in navDropItems">
@@ -15,13 +10,20 @@
           </template>
         </v-layout>
       </v-container>
-    </v-navigation-drawer>
+    </div>
   </div>
 </template>
 
-<style scoped>
-.side-nav {
-  background-color: transparent;
+<style style="scss" scoped>
+#side-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+
+  z-index: 100;
+  background: transparent;
 }
 
 .card-container {
@@ -40,10 +42,19 @@
   justify-content: center;
 }
 
+h1 {
+  font-size: 35px;
+  /* text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3); */
+}
+
 .red-card {
   border: 2px solid #e53935;
   color: #e53935;
   background: transparent;
+}
+
+.red-card:hover {
+  border: 4px solid #e53935;
 }
 
 .purple-card {
@@ -52,10 +63,18 @@
   background: transparent;
 }
 
+.purple-card:hover {
+  border: 4px solid #673ab7;
+}
+
 .blue-card {
   border: 2px solid #2962ff;
   color: #2962ff;
   background: transparent;
+}
+
+.blue-card:hover {
+  border: 4px solid #2962ff;
 }
 </style>
 
@@ -69,7 +88,7 @@ export default {
       navDropItems: [
         { title: "About me", link: "/about", theme: "red-card" },
         { title: "Portfolio", link: "/portfolio", theme: "purple-card" },
-        { title: "Contact Info", link: "/contact", theme: "blue-card" }
+        { title: "Contact", link: "/contact", theme: "blue-card" }
       ]
     };
   },
