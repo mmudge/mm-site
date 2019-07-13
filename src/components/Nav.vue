@@ -8,6 +8,17 @@
               <h1>{{item.title.toUpperCase()}}</h1>
             </v-card>
           </template>
+          <div class="flex-center">
+            <template v-for="s in socialLinks" class="social-links">
+              <v-btn icon :href="s.link" :key="s.icon">
+                <v-icon :color="s.color">{{s.icon}}</v-icon>
+              </v-btn>
+            </template>
+          </div>
+          <!-- <a href="https://github.com/mmudge"><%= fa_icon "github" %></a>
+        <a href="https://www.instagram.com/m_mudge/"><%= fa_icon "instagram" %></a>
+        <a href="https://twitter.com/mike84733340"><%= fa_icon "twitter" %></a>
+          <a href="https://www.linkedin.com/in/michaeltmudge/"><%= fa_icon "linkedin" %></a>-->
         </v-layout>
       </v-container>
     </div>
@@ -75,6 +86,13 @@ h1 {
 .blue-card:hover {
   border: 4px solid #2962ff;
 }
+
+.social-links {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 <script>
@@ -88,6 +106,23 @@ export default {
         { title: "About me", link: "/about", theme: "red-card" },
         { title: "Portfolio", link: "/portfolio", theme: "purple-card" },
         { title: "Contact", link: "/contact", theme: "blue-card" }
+      ],
+      socialLinks: [
+        {
+          icon: "fab fa-linkedin-in",
+          color: "#09FDD9",
+          link: "https://www.linkedin.com/in/michaeltmudge/"
+        },
+        {
+          icon: "fab fa-github",
+          color: "#673ab7",
+          link: "https://github.com/mmudge"
+        },
+        {
+          icon: "fab fa-gitlab",
+          color: "#2962ff",
+          link: "https://gitlab.com/mmudge"
+        }
       ]
     };
   },
