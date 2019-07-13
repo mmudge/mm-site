@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <Nav :appName="appName"/>
+    <Nav :appName="appName" />
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
@@ -17,8 +17,22 @@ export default {
   },
   data() {
     return {
-      appName: "Cany Apple Red"
+      appName: "Michael Mudge | Web Developer"
     };
   }
 };
 </script>
+
+<style lang="scss">
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  // background-color: #e0e0e0;
+  // background-color: black;
+  // background-color: #212121;
+}
+</style>
