@@ -1,4 +1,4 @@
-# candy-apple-red
+# Personal Site
 
 ## Project setup
 ```
