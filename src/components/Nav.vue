@@ -3,9 +3,15 @@
     <div id="side-nav">
       <v-container class="card-container" fluid>
         <v-layout column justify-center class="card-layout">
+          <div class="home-link" @click="$router.push('/')">
+            <div class="flex-center">
+              <Avatar h="height: 40px;" w="width: 40px;" />
+              <h1 class="nav-header">Michael Mudge</h1>
+            </div>
+          </div>
           <template v-for="(item, index) in navDropItems">
             <v-card flat :to="item.link" :class="item.theme" class="nav-card" :key="index">
-              <h1>{{item.title.toUpperCase()}}</h1>
+              <h1 class="card-title">{{item.title.toUpperCase()}}</h1>
             </v-card>
           </template>
           <div class="flex-center">
@@ -15,10 +21,6 @@
               </v-btn>
             </template>
           </div>
-          <!-- <a href="https://github.com/mmudge"><%= fa_icon "github" %></a>
-        <a href="https://www.instagram.com/m_mudge/"><%= fa_icon "instagram" %></a>
-        <a href="https://twitter.com/mike84733340"><%= fa_icon "twitter" %></a>
-          <a href="https://www.linkedin.com/in/michaeltmudge/"><%= fa_icon "linkedin" %></a>-->
         </v-layout>
       </v-container>
     </div>
@@ -34,6 +36,16 @@
   width: 450px;
   z-index: 100;
   background: transparent;
+}
+
+.home-link:hover {
+  cursor: pointer;
+}
+
+.nav-header {
+  color: #09fdd9;
+  font-size: 1vw;
+  margin-left: 20px;
 }
 
 .card-container {
@@ -52,7 +64,7 @@
   justify-content: center;
 }
 
-h1 {
+.card-title {
   font-size: 35px;
   /* text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3); */
 }
@@ -96,12 +108,18 @@ h1 {
 </style>
 
 <script>
+import Avatar from "./Avatar.vue";
+
 export default {
   name: "Nav",
   props: ["appName"],
+  components: {
+    Avatar
+  },
   data() {
     return {
       drawer: true,
+      avatarSize: "height: 20px; width 20px;",
       navDropItems: [
         { title: "About me", link: "/about", theme: "red-card" },
         { title: "Portfolio", link: "/portfolio", theme: "purple-card" },
@@ -127,7 +145,11 @@ export default {
     };
   },
   computed: {},
-  methods: {}
+  methods: {
+    goHome() {
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 
