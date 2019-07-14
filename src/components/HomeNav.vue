@@ -29,7 +29,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 450px;
+  width: 20vw;
   z-index: 100;
   background: transparent;
 }
@@ -59,11 +59,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .card-title {
   font-size: 35px;
-  /* text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3); */
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .red-card {
