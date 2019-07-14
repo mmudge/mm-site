@@ -66,31 +66,36 @@
     }
 
     .line-one {
-      color: #2962ff;
+      // color: #2962ff;
+      color: white;
       font-size: 5vw;
       font-weight: 300;
     }
 
     .line-two {
       color: #09fdd9;
+      // color: white;
       font-size: 5.5vw;
       font-weight: 400;
     }
 
     .line-three {
       color: #673ab7;
+      // color: white;
       font-size: 3.5vw;
       font-weight: 300;
     }
 
     .line-four {
-      color: #e53935;
+      // color: #e53935;
+      color: white;
       font-size: 2vw;
       font-weight: 200;
     }
 
     .line-five {
       color: #2962ff;
+      // color: white;
       font-size: 2.5vw;
       font-weight: 400;
     }
