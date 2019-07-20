@@ -19,18 +19,22 @@ export default {
         {
           content: "michaeltmudge@gmail.com",
           icon: "fas fa-at",
-          color: "#2962ff"
+          color: "blue-grey darken-4"
         },
-        { content: "+31 06 18506736", icon: "fas fa-phone", color: "#673ab7" },
+        {
+          content: "+31 06 18506736",
+          icon: "fas fa-phone",
+          color: "blue-grey darken-4"
+        },
         {
           content: "+1 (951) 323-1876",
           icon: "fas fa-phone",
-          color: "#09FDD9"
+          color: "blue-grey darken-4"
         },
         {
           content: "Alphen aan den Rijn, Netherlands",
           icon: "fas fa-location-arrow",
-          color: "#e53935"
+          color: "blue-grey darken-4"
         }
       ]
     };

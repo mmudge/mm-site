@@ -1,25 +1,6 @@
-<!-- <template>
-  <div>
-    <div class="navbar">
-      <div class="nav-link" @click="goTo()">
-        <Avatar h="height: 40px;" w="width: 40px;" />
-      </div>
-      <template v-for="nav in navItems">
-        <div
-          class="nav-link nav-words"
-          @click="goTo(nav.link)"
-          :key="nav.title"
-        >{{ nav.title.toUpperCase() }}</div>
-      </template>
-      <Social />
-    </div>
-  </div>
-</template> -->
-
-
 <template>
-  <span>
-    <v-navigation-drawer app v-model="drawer" class="blue darken-2" dark disable-resize-watcher>
+  <span class="main-nav">
+    <v-navigation-drawer app v-model="drawer" class="blue darken-4" dark disable-resize-watcher>
       <v-list>
         <template v-for="(item, index) in navItems">
           <v-list-tile :to="item.link" :key="index">
@@ -29,7 +10,7 @@
         </template>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app color="blue darken-2" dark>
+    <v-toolbar app color="blue darken-4" dark>
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-btn dark flat to="/">
@@ -40,35 +21,14 @@
       <div v-for="(item, index) in navItems" :key="index" class="hidden-sm-and-down">
         <v-btn :to="item.link" flat class="hidden-sm-and-down">{{ item.title }}</v-btn>
       </div>
+      <Social :the_color="red" />
     </v-toolbar>
   </span>
 </template>
 
-
-
-
-
-
 <style style="scss" scoped>
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
-}
-
-.nav-link {
-  margin: 0px 30px;
-}
-
-.nav-words {
-  font-size: 18px;
-}
-.nav-link:hover {
-  cursor: pointer;
+.main-nav {
+  font-family: "Comfortaa", cursive;
 }
 </style>
 
@@ -94,7 +54,11 @@ export default {
       ]
     };
   },
-  computed: {},
+  computed: {
+    socialColor() {
+      return "white";
+    }
+  },
   methods: {
     goHome() {
       this.$router.push("/");

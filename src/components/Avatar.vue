@@ -20,5 +20,6 @@ export default {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
+  background-position: -50px;
 }
 </style>

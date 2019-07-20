@@ -17,6 +17,11 @@ export default {
 </script>
 
 <style lang="scss">
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|PT+Serif&display=swap");
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -29,6 +34,21 @@ export default {
   // background-image: linear-gradient(180deg, #212121, 80%, #f0f0f0);
   // background-color: black;
   // background-color: #212121;
-  background-color: #f0f0f0;
+  // background-color: #f0f0f0;
+  // font-family: "Raleway", sans-serif;
+  // font-family: "Ubuntu", sans-serif;
+  font-family: "PT Serif", serif;
+  // color: #212121;
+  color: #37474f;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
 }
 </style>
+
+

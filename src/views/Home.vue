@@ -33,11 +33,6 @@
 
 
 <style lang="scss" scoped>
-//  #e53935;
-//  #673ab7;
-//  #2962ff;
-//   #09FDD9
-
 #home {
   background-image: linear-gradient(
       75deg,
@@ -58,6 +53,7 @@
     text-align: center;
     line-height: 0.75;
     z-index: 1;
+    font-family: "Comfortaa", cursive;
 
     .line-item {
       word-spacing: 0px;

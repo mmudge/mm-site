@@ -15,7 +15,7 @@
             </v-card>
           </template>
           <div class="flex-center">
-            <Social />
+            <Social :the_color="socialColor" />
           </div>
         </v-layout>
       </v-container>
@@ -32,6 +32,7 @@
   width: 20vw;
   z-index: 100;
   background: transparent;
+  font-family: "Comfortaa", cursive;
 }
 
 .home-link:hover {
@@ -120,7 +121,11 @@ export default {
       ]
     };
   },
-  computed: {},
+  computed: {
+    socialColor() {
+      return "white";
+    }
+  },
   methods: {
     goHome() {
       this.$router.push("/");
