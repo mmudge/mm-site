@@ -3,12 +3,12 @@
     <div id="side-nav">
       <v-container class="card-container" fluid>
         <v-layout column justify-center class="card-layout">
-          <div class="home-link" @click="$router.push('/')">
+          <!-- <div class="home-link" @click="$router.push('/')">
             <div class="flex-center">
               <Avatar h="height: 40px;" w="width: 40px;" />
               <h1 class="nav-header">Michael Mudge</h1>
             </div>
-          </div>
+          </div>-->
           <template v-for="(item, index) in navDropItems">
             <v-card flat :to="item.link" :class="item.theme" class="nav-card" :key="index">
               <h1 class="card-title">{{item.title.toUpperCase()}}</h1>

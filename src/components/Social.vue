@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <template v-for="s in socialLinks" class="social-links">
+  <div class="social-links">
+    <template v-for="s in socialLinks">
       <v-btn icon :href="s.link" :key="s.icon">
         <v-icon :color="s.color">{{s.icon}}</v-icon>
       </v-btn>

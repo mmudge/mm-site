@@ -18,13 +18,6 @@
 </template>
 
 <style scoped>
-.contact-flex {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  color: #212121;
-  font-size: 32px;
-}
 </style>
 <script>
 import Social from "../components/Social.vue";
@@ -37,26 +30,12 @@ export default {
     Nav
   },
   data() {
-    return {
-      contactInfo: [
-        {
-          content: "michaeltmudge@gmail.com",
-          icon: "fas fa-at",
-          color: "#2962ff"
-        },
-        { content: "+31 06 18506736", icon: "fas fa-phone", color: "#673ab7" },
-        {
-          content: "+1 (951) 323-1876",
-          icon: "fas fa-phone",
-          color: "#09FDD9"
-        },
-        {
-          content: "Alphen aan den Rijn, Netherlands",
-          icon: "fas fa-location-arrow",
-          color: "#e53935"
-        }
-      ]
-    };
+    return {};
+  },
+  computed: {
+    contactInfo() {
+      return this.$store.state.contactInfo;
+    }
   }
 };
 </script>
