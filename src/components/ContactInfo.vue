@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-for="contact in contactInfo">
-      <div :key="contact.content" class="contact-flex">
+      <div :key="contact.content" class="contact-flex py-2">
         <v-icon :color="contact.color" style="font-size: 16px;" class="mr-3">{{ contact.icon }}</v-icon>
         <p class="mb-0">{{ contact.content }}</p>
       </div>
@@ -19,22 +19,22 @@ export default {
         {
           content: "michaeltmudge@gmail.com",
           icon: "fas fa-at",
-          color: "blue-grey darken-4"
+          color: "light-blue darken-1"
         },
         {
           content: "+31 06 18506736",
           icon: "fas fa-phone",
-          color: "blue-grey darken-4"
+          color: "indigo darken-4"
         },
         {
           content: "+1 (951) 323-1876",
-          icon: "fas fa-phone",
-          color: "blue-grey darken-4"
+          icon: "fas fa-flag-usa",
+          color: "blue darken-2"
         },
         {
           content: "Alphen aan den Rijn, Netherlands",
-          icon: "fas fa-location-arrow",
-          color: "blue-grey darken-4"
+          icon: "fas fa-map-pin",
+          color: "red darken-1"
         }
       ]
     };
@@ -50,5 +50,6 @@ export default {
   align-items: center;
   justify-content: left;
   /* color: #212121; */
+  font-size: 16px;
 }
 </style>

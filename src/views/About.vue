@@ -1,13 +1,18 @@
 <template>
   <div class="about">
     <Nav />
+    <v-container fluid class="milky-way-bg flex-center">
+      <h1>About me</h1>
+    </v-container>
     <v-container class="about-container">
       <v-layout row>
         <v-flex>
           <div class="about-leftside px-5">
             <Avatar h="height: 250px;" w="width: 250px;" />
+            <div class="flex-center mt-5">
+              <v-btn color="blue darken-4" flat outline @click="dialog = !dialog">View Photos</v-btn>
+            </div>
             <Social :the_color="socialColor" class="mt-3" />
-
             <ContactInfo class="mt-3" />
           </div>
         </v-flex>
@@ -40,38 +45,55 @@
               class="about-text"
             >I’m always open to new business opportunities. Please feel free to contact me if you would like to have more information.</p>
           </div>
+          <div class="personal mt-5">
+            <h1>Personal</h1>
+            <p class="about-text">
+              I'm an American living in the Netherlands working as a software developer.
+              I moved to the Netherlands in 2018 to be with my Dutch girlfriend.
+              My hobbies are playing with computers, sports, cooking, reading, traveling, chess, fitness, and video games.
+              I am currently learning to speak Dutch.
+              They say pictures are worth a thousand words, so here are some
+              <a
+                class="mr-1 blue--text"
+                @click="dialog = !dialog"
+              >pictures</a>of the highlights in my life the last few years.
+            </p>
+          </div>
           <div class="skills mt-5">
             <h1>Skills</h1>
             <v-layout wrap>
               <template v-for="chip in chips">
-                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.icon" />
+                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
               </template>
             </v-layout>
           </div>
-          <div class="personal mt-5">
-            <h1>Personal</h1>
-            <p class="about-text">im a cool guy bla bla</p>
-          </div>
+
           <div class="education mt-5">
             <h1>Education</h1>
             <v-layout wrap>
               <template v-for="chip in education">
-                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.icon" />
+                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
               </template>
             </v-layout>
           </div>
         </v-flex>
       </v-layout>
 
-      <v-layout justify-center>
+      <!-- <v-layout justify-center>
         <div>
           <h3>Github</h3>
           <a href="https://github.com/mmudge" target="_blank">
             <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />
           </a>
         </div>
-      </v-layout>
+      </v-layout>-->
+      <v-dialog width="1600" height="900" v-model="dialog">
+        <div>
+          <Carousel />
+        </div>
+      </v-dialog>
     </v-container>
+    <Footer />
   </div>
 </template>
 
@@ -81,6 +103,8 @@ import Avatar from "../components/Avatar.vue";
 import Social from "../components/Social.vue";
 import ContactInfo from "../components/ContactInfo.vue";
 import Chip from "../components/Chip.vue";
+import Carousel from "../components/Carousel.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home",
@@ -89,10 +113,13 @@ export default {
     Avatar,
     Social,
     ContactInfo,
-    Chip
+    Chip,
+    Carousel,
+    Footer
   },
   data() {
     return {
+      dialog: false,
       chips: [
         {
           text: "JavaScript",
@@ -169,7 +196,13 @@ export default {
 
 <style lang="scss">
 .about-container {
-  margin-top: 20vh;
+  margin-top: 100px;
+}
+
+.about-leftside {
+  button {
+    font-family: "Comfortaa", cursive;
+  }
 }
 
 .about {
@@ -180,7 +213,6 @@ export default {
     h1 {
       color: #0d47a1;
       font-size: 36px;
-      // font-family: "Russo One", sans-serif;
       font-family: "Comfortaa", cursive;
     }
 
@@ -188,6 +220,26 @@ export default {
       font-size: 16px;
     }
   }
+}
+
+.milky-way-bg {
+  background-image: url("../assets/milkyway.jpg");
+  background-size: cover;
+  height: 300px;
+
+  h1 {
+    color: white;
+    font-family: "Comfortaa", cursive;
+    font-size: 62px;
+  }
+}
+
+.about-carousel {
+  width: 1600px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 

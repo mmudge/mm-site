@@ -14,6 +14,7 @@
       <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-toolbar-side-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-btn dark flat to="/">
+        <v-icon class="ml-3">fas fa-space-shuttle</v-icon>
         <v-toolbar-title>Michael Mudge</v-toolbar-title>
       </v-btn>
 
@@ -57,21 +58,6 @@ export default {
   computed: {
     socialColor() {
       return "white";
-    }
-  },
-  methods: {
-    goHome() {
-      this.$router.push("/");
-    },
-    goTo(route) {
-      if (!route) {
-        this.goHome();
-      } else {
-        this.$router.push(`${route}`);
-      }
-    },
-    clicked() {
-      console.log("clicked");
     }
   }
 };
