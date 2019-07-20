@@ -59,9 +59,8 @@ export default {
       drawer: false,
       avatarSize: "height: 20px; width 20px;",
       navItems: [
-        { title: "About me", link: "/about" },
-        { title: "Portfolio", link: "/portfolio" },
-        { title: "Contact", link: "/contact" }
+        { title: "Info", link: "/about" },
+        { title: "Portfolio", link: "/portfolio" }
       ]
     };
   },

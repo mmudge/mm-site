@@ -115,9 +115,9 @@ export default {
       drawer: true,
       avatarSize: "height: 20px; width 20px;",
       navDropItems: [
-        { title: "About me", link: "/about", theme: "red-card" },
-        { title: "Portfolio", link: "/portfolio", theme: "purple-card" },
-        { title: "Contact", link: "/contact", theme: "blue-card" }
+        { title: "Info", link: "/about", theme: "blue-card" },
+        { title: "Portfolio", link: "/portfolio", theme: "purple-card" }
+        // { title: "Contact", link: "/contact", theme: "blue-card" }
       ]
     };
   },
