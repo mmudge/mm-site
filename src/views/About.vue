@@ -1,11 +1,11 @@
 <template>
   <div class="about">
     <Nav />
-    <v-container fluid class="milky-way-bg flex-center">
-      <h1>About me</h1>
-    </v-container>
     <v-container class="about-container">
-      <v-layout row>
+      <div class="flex-center">
+        <h1>About me</h1>
+      </div>
+      <v-layout row class="mt-5" wrap>
         <v-flex>
           <div class="about-leftside px-5">
             <Avatar h="height: 250px;" w="width: 250px;" />
@@ -76,6 +76,15 @@
               </template>
             </v-layout>
           </div>
+
+          <!-- <div class="work mt-5">
+            <h1>Work</h1>
+            <div class="flex-center">
+              <a href="https://github.com/mmudge" target="_blank">
+                <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />
+              </a>
+            </div>
+          </div>-->
         </v-flex>
       </v-layout>
 
@@ -197,6 +206,12 @@ export default {
 <style lang="scss">
 .about-container {
   margin-top: 100px;
+
+  h1 {
+    color: #0d47a1;
+    font-family: "Comfortaa", cursive;
+    font-size: 62px;
+  }
 }
 
 .about-leftside {
@@ -209,7 +224,8 @@ export default {
   .professional,
   .skills,
   .personal,
-  .education {
+  .education,
+  .work {
     h1 {
       color: #0d47a1;
       font-size: 36px;
@@ -219,18 +235,6 @@ export default {
     .about-text {
       font-size: 16px;
     }
-  }
-}
-
-.milky-way-bg {
-  background-image: url("../assets/milkyway.jpg");
-  background-size: cover;
-  height: 300px;
-
-  h1 {
-    color: white;
-    font-family: "Comfortaa", cursive;
-    font-size: 62px;
   }
 }
 
