@@ -1,22 +1,25 @@
 <template>
   <div class="about">
-    <Nav />
     <v-container class="about-container">
       <div class="flex-center">
         <h1>About me</h1>
       </div>
       <v-layout row class="mt-5" wrap>
-        <v-flex>
+        <v-flex xs12 md3>
           <div class="about-leftside px-5">
-            <Avatar h="height: 250px;" w="width: 250px;" />
-            <div class="flex-center mt-5">
+            <div class="flex-center">
+              <Avatar h="height: 250px;" w="width: 250px;" />
+            </div>
+            <div class="flex-center mt-5 hidden-sm-and-down">
               <v-btn color="blue darken-4" flat outline @click="dialog = !dialog">View Photos</v-btn>
             </div>
             <Social :the_color="socialColor" class="mt-3" />
-            <ContactInfo class="mt-3" />
+            <div class="flex-center my-3">
+              <ContactInfo />
+            </div>
           </div>
         </v-flex>
-        <v-flex>
+        <v-flex xs12 md9>
           <div class="professional">
             <h1>Professional</h1>
             <p class="about-text">
@@ -52,11 +55,16 @@
               I moved to the Netherlands in 2018 to be with my Dutch girlfriend.
               My hobbies are playing with computers, sports, cooking, reading, traveling, chess, fitness, and video games.
               I am currently learning to speak Dutch.
-              They say pictures are worth a thousand words, so here are some
-              <a
-                class="mr-1 blue--text"
-                @click="dialog = !dialog"
-              >pictures</a>of the highlights in my life the last few years.
+              <span
+                class="hidden-sm-and-down"
+              >
+                They say pictures are worth a thousand words, so here are some
+                <a
+                  class="mr-1 blue--text"
+                  @click="dialog = !dialog"
+                >pictures</a>
+                of the highlights in my life the last few years.
+              </span>
             </p>
           </div>
           <div class="skills mt-5">
@@ -102,7 +110,6 @@
         </div>
       </v-dialog>
     </v-container>
-    <Footer />
   </div>
 </template>
 

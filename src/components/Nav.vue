@@ -2,12 +2,16 @@
   <span class="main-nav">
     <v-navigation-drawer app v-model="drawer" class="blue darken-4" dark disable-resize-watcher>
       <v-list>
-        <v-tile-content flat to="/">
+        <v-list-tile flat to="/">
           <div class="flex-center py-3">
             <v-icon>fas fa-space-shuttle</v-icon>
           </div>
           <v-divider></v-divider>
-        </v-tile-content>
+        </v-list-tile>
+        <v-list-tile to="/">
+          <v-list-tile-content>Home</v-list-tile-content>
+        </v-list-tile>
+        <v-divider></v-divider>
         <template v-for="(item, index) in navItems">
           <v-list-tile :to="item.link" :key="index">
             <v-list-tile-content>{{item.title}}</v-list-tile-content>
@@ -28,7 +32,7 @@
       <div v-for="(item, index) in navItems" :key="index" class="hidden-sm-and-down">
         <v-btn :to="item.link" flat class="hidden-sm-and-down">{{ item.title }}</v-btn>
       </div>
-      <Social class="hidden-sm-and-down" :the_color="red" />
+      <Social class="hidden-sm-and-down" :the_color="socialColor" />
     </v-toolbar>
   </span>
 </template>
@@ -55,7 +59,6 @@ export default {
       drawer: false,
       avatarSize: "height: 20px; width 20px;",
       navItems: [
-        { title: "Home", link: "/" },
         { title: "About me", link: "/about" },
         { title: "Portfolio", link: "/portfolio" },
         { title: "Contact", link: "/contact" }
