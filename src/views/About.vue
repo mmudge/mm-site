@@ -5,7 +5,7 @@
       <v-divider class="mb-5"></v-divider>
 
       <v-layout align-center wrap class="mt-5 about-header">
-        <v-flex class="my-2" xs12 md6>
+        <v-flex class="py-5" xs12 md6>
           <div class="flex-center">
             <Avatar h="height: 250px;" w="width: 250px;" />
           </div>
@@ -14,7 +14,7 @@
           </div>
         </v-flex>
 
-        <v-flex class="my-2" xs12 md6>
+        <v-flex class="py-2" xs12 md6>
           <h3>Contact Info</h3>
           <div class="flex-center my-3">
             <ContactInfo />
