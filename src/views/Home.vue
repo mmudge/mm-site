@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <HomeNav :appName="appName" />
+    <!-- <HomeNav :appName="appName" /> -->
     <vue-particles
       color="#fff"
       :particleOpacity="0.5"
@@ -21,11 +21,21 @@
     ></vue-particles>
     <v-container class="flex-center header-content">
       <div>
-        <p class="line-item line-one">HELLO</p>
-        <p class="line-item line-two">I'M MIKE</p>
-        <p class="line-item line-three">I'M A WEB DEVELOPER</p>
-        <p class="line-item line-four">WITH A PASSION FOR</p>
-        <p class="line-item line-five">CODE, DESIGN, & SOFTWARE</p>
+        <div>
+          <p class="line-item line-one">HELLO</p>
+          <p class="line-item line-two">I'M MIKE</p>
+          <p class="line-item line-three">I'M A WEB DEVELOPER</p>
+          <p class="line-item line-four">WITH A PASSION FOR</p>
+          <p class="line-item line-five">CODE, DESIGN, & SOFTWARE</p>
+        </div>
+        <v-layout class="mt-5" justify-center wrap>
+          <v-flex xs12 md4>
+            <v-btn to="/about" flat large outline color="blue">Information</v-btn>
+          </v-flex>
+          <v-flex xs12 md4>
+            <v-btn to="/portfolio" flat large outline color="red">Portfolio</v-btn>
+          </v-flex>
+        </v-layout>
       </div>
     </v-container>
   </div>
@@ -96,17 +106,19 @@
       font-weight: 400;
     }
   }
+
+  .v-btn--large {
+    height: 74px;
+    padding: 0 102px;
+  }
 }
 </style>
 
 
 <script>
-import HomeNav from "../components/HomeNav.vue";
 export default {
   name: "Home",
-  components: {
-    HomeNav
-  },
+  components: {},
   data() {
     return {
       appName: "Michael Mudge | Web Developer"

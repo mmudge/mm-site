@@ -1,16 +1,17 @@
 <template>
   <div>
-    <v-container>
+    <v-container class="portfolio-container">
       <h1 class="mt-5">Portfolio</h1>
       <v-divider class="mb-5"></v-divider>
-      <v-layout class="mt-5" offset-sm3 row wrap>
+      <v-layout class="mt-5" row wrap>
         <template v-for="project in portfolio">
-          <v-flex xs12 sm6 md3 :key="project.name">
+          <v-flex pa-2 xs12 sm6 md3 :key="project.name">
             <PortfolioItem
               :name="project.name"
               :role="project.role"
               :description="project.description"
               :technology="project.technology"
+              :img="project.src"
             />
           </v-flex>
         </template>
@@ -34,31 +35,36 @@ export default {
           name: "first project",
           role: "developer",
           description: "asdf",
-          technology: "js"
+          technology: "js",
+          src: require("../assets/hawaiisunrise.jpeg")
         },
         {
           name: "second project",
           role: "developer",
           description: "asdf",
-          technology: "js"
+          technology: "js",
+          src: require("../assets/hawaiisunrise.jpeg")
         },
         {
           name: "third project",
           role: "developer",
           description: "asdf",
-          technology: "js"
+          technology: "js",
+          src: require("../assets/hawaiisunrise.jpeg")
         },
         {
           name: "fourth project",
           role: "developer",
           description: "asdf",
-          technology: "js"
+          technology: "js",
+          src: require("../assets/hawaiisunrise.jpeg")
         },
         {
           name: "fifth project",
           role: "developer",
           description: "asdf",
-          technology: "js"
+          technology: "js",
+          src: require("../assets/hawaiisunrise.jpeg")
         }
       ]
     };
@@ -68,5 +74,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.portfolio-container {
+  h1 {
+    color: #0d47a1;
+    font-family: "Comfortaa", cursive;
+    font-size: 62px;
+    text-align: center;
+  }
+}
 </style>
