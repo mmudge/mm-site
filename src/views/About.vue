@@ -1,109 +1,101 @@
 <template>
   <div class="about">
     <v-container class="about-container">
-      <div class="flex-center">
-        <h1>About me</h1>
-      </div>
-      <v-layout row class="mt-5" wrap>
-        <v-flex xs12 md3>
-          <div class="about-leftside px-5">
-            <div class="flex-center">
-              <Avatar h="height: 250px;" w="width: 250px;" />
-            </div>
-            <div class="flex-center mt-5 hidden-sm-and-down">
-              <v-btn color="blue darken-4" flat outline @click="dialog = !dialog">View Photos</v-btn>
-            </div>
-            <Social :the_color="socialColor" class="mt-3" />
-            <div class="flex-center my-3">
-              <ContactInfo />
-            </div>
+      <h1 class="mt-5">About me</h1>
+      <v-divider class="mb-5"></v-divider>
+
+      <v-layout align-center wrap class="mt-5 about-header">
+        <v-flex class="my-2" xs12 md6>
+          <div class="flex-center">
+            <Avatar h="height: 250px;" w="width: 250px;" />
+          </div>
+          <div class="flex-center mt-2 hidden-sm-and-down">
+            <v-btn color="blue darken-4" flat small outline @click="dialog = !dialog">View Photos</v-btn>
           </div>
         </v-flex>
-        <v-flex xs12 md9>
-          <div class="professional">
-            <h1>Professional</h1>
-            <p class="about-text">
-              Software development is a personal passion of mine. My focus is primarily on full stack web development, however all types of software development interest me.
-              Building websites and web applications is something I thoroughly enjoy from start to finish, from creating a new project folder to deployment.
-              I enjoy both the artistic and design side of the front end, as well as working with data and the more logical side of the back end.
-              The challenge of constantly learning new things keeps as well as finding solutions to difficult problems keeps working with code very fun and exciting to me.
-              That being said, work never feels like work to me but instead more like a passion hobby that I enjoy doing every day.
-              The main technologies I use to build project are JavaScript (ES6+),
-              Vue.js, and Ruby on Rails 5, skills which I initially learned in 2018 while attending
-              <a
-                class="red--text"
-                href="https://www.lewagon.com/"
-              >Le Wagon</a> Amsterdam and ever since I have continued developing both on the job and in my own free time.
-            </p>
 
-            <p class="about-text">
-              I’m currently working as a software developer at
-              <a
-                class="blue--text"
-                href="https://aeroscan.nl/"
-              >AeroScan</a>, developing 3D real estate inspection software with drones.
-              We are working with some of the biggest real estate companies in the Netherlands with the goal of making digital inspections a reality.
-            </p>
-            <p
-              class="about-text"
-            >I’m always open to new business opportunities. Please feel free to contact me if you would like to have more information.</p>
+        <v-flex class="my-2" xs12 md6>
+          <h3>Contact Info</h3>
+          <div class="flex-center my-3">
+            <ContactInfo />
           </div>
-          <div class="personal mt-5">
-            <h1>Personal</h1>
-            <p class="about-text">
-              I'm an American living in the Netherlands working as a software developer.
-              I moved to the Netherlands in 2018 to be with my Dutch girlfriend.
-              My hobbies are playing with computers, sports, cooking, reading, traveling, chess, fitness, and video games.
-              I am currently learning to speak Dutch.
-              <span
-                class="hidden-sm-and-down"
-              >
-                They say pictures are worth a thousand words, so here are some
-                <a
-                  class="mr-1 blue--text"
-                  @click="dialog = !dialog"
-                >pictures</a>
-                of the highlights in my life the last few years.
-              </span>
-            </p>
-          </div>
-          <div class="skills mt-5">
-            <h1>Skills</h1>
-            <v-layout wrap>
-              <template v-for="chip in chips">
-                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
-              </template>
-            </v-layout>
-          </div>
-
-          <div class="education mt-5">
-            <h1>Education</h1>
-            <v-layout wrap>
-              <template v-for="chip in education">
-                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
-              </template>
-            </v-layout>
-          </div>
-
-          <!-- <div class="work mt-5">
-            <h1>Work</h1>
-            <div class="flex-center">
-              <a href="https://github.com/mmudge" target="_blank">
-                <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />
-              </a>
-            </div>
-          </div>-->
+          <Social :the_color="socialColor" class="mt-3 hidden-md-and-up" />
         </v-flex>
       </v-layout>
 
-      <!-- <v-layout justify-center>
-        <div>
-          <h3>Github</h3>
-          <a href="https://github.com/mmudge" target="_blank">
-            <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />
-          </a>
-        </div>
-      </v-layout>-->
+      <div class="professional mt-5">
+        <h2>Professional</h2>
+        <p class="about-text">
+          Software development is a personal passion of mine. My focus is primarily on full stack web development, however all types of software development interest me.
+          Building websites and web applications is something I thoroughly enjoy from start to finish, from creating a new project folder to deployment.
+          I enjoy both the artistic and design side of the front end, as well as working with data and the more logical side of the back end.
+          The challenge of constantly learning new things keeps as well as finding solutions to difficult problems keeps working with code very fun and exciting to me.
+          That being said, work never feels like work to me but instead more like a passion hobby that I enjoy doing every day.
+          The main technologies I use to build project are JavaScript (ES6+),
+          Vue.js, and Ruby on Rails 5, skills which I initially learned in 2018 while attending
+          <a
+            class="red--text"
+            href="https://www.lewagon.com/"
+          >Le Wagon</a> Amsterdam and ever since I have continued developing both on the job and in my own free time.
+        </p>
+
+        <p class="about-text">
+          I’m currently working as a software developer at
+          <a
+            class="blue--text"
+            href="https://aeroscan.nl/"
+          >AeroScan</a>, developing 3D real estate inspection software with drones.
+          We are working with some of the biggest real estate companies in the Netherlands with the goal of making digital inspections a reality.
+        </p>
+        <p
+          class="about-text"
+        >I’m always open to new business opportunities. Please feel free to contact me if you would like to have more information.</p>
+      </div>
+      <div class="personal mt-5">
+        <h2>Personal</h2>
+        <p class="about-text">
+          I'm an American living in the Netherlands working as a software developer.
+          I moved to the Netherlands in 2018 to be with my Dutch girlfriend.
+          My hobbies are playing with computers, sports, cooking, reading, traveling, chess, fitness, and video games.
+          I am currently learning to speak Dutch.
+          <span
+            class="hidden-sm-and-down"
+          >
+            They say pictures are worth a thousand words, so here are some
+            <a
+              class="mr-1 blue--text"
+              @click="dialog = !dialog"
+            >pictures</a>
+            of the highlights in my life the last few years.
+          </span>
+        </p>
+      </div>
+      <div class="skills mt-5">
+        <h2>Skills</h2>
+        <v-layout wrap>
+          <template v-for="chip in chips">
+            <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
+          </template>
+        </v-layout>
+      </div>
+
+      <div class="education mt-5">
+        <h2>Education</h2>
+        <v-layout wrap>
+          <template v-for="chip in education">
+            <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
+          </template>
+        </v-layout>
+      </div>
+
+      <div class="work mt-5 hidden-sm-and-down">
+        <h2>Work</h2>
+
+        <a href="https://github.com/mmudge" target="_blank">
+          <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />
+        </a>
+      </div>
+
       <v-dialog width="1600" height="900" v-model="dialog">
         <div>
           <Carousel />
@@ -212,16 +204,22 @@ export default {
 
 <style lang="scss">
 .about-container {
-  margin-top: 100px;
-
   h1 {
     color: #0d47a1;
     font-family: "Comfortaa", cursive;
     font-size: 62px;
+    text-align: center;
+  }
+
+  h3 {
+    color: #0d47a1;
+    font-family: "Comfortaa", cursive;
+    font-size: 24px;
+    text-align: center;
   }
 }
 
-.about-leftside {
+.about-header {
   button {
     font-family: "Comfortaa", cursive;
   }
@@ -233,7 +231,7 @@ export default {
   .personal,
   .education,
   .work {
-    h1 {
+    h2 {
       color: #0d47a1;
       font-size: 36px;
       font-family: "Comfortaa", cursive;
