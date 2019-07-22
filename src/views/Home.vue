@@ -80,6 +80,7 @@
 
     .line-two {
       color: #09fdd9;
+      // color: blue;
       // color: white;
       font-size: 5.5vw;
       font-weight: 400;
