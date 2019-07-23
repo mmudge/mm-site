@@ -24,7 +24,7 @@
     <div class="flex-center">
       <v-card-actions>
         <v-btn flat fab>
-          <v-icon>stop</v-icon>
+          <v-icon>fa-heart</v-icon>
         </v-btn>
       </v-card-actions>
     </div>
