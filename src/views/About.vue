@@ -23,8 +23,8 @@
         </v-flex>
       </v-layout>
 
-      <div class="professional mt-5">
-        <h2>Professional</h2>
+      <div class="professional my-5">
+        <h2 class="py-4">Professional</h2>
         <p class="about-text">
           Software development is a personal passion of mine. My focus is primarily on full stack web development, however all types of software development interest me.
           Building websites and web applications is something I thoroughly enjoy from start to finish, from creating a new project folder to deployment.
@@ -51,8 +51,8 @@
           class="about-text"
         >I’m always open to new business opportunities. Please feel free to contact me if you would like to have more information.</p>
       </div>
-      <div class="personal mt-5">
-        <h2>Personal</h2>
+      <div class="personal my-5">
+        <h2 class="py-4">Personal</h2>
         <p class="about-text">
           I'm an American living in the Netherlands working as a software developer.
           I moved to the Netherlands in 2018 to be with my Dutch girlfriend.
@@ -70,8 +70,8 @@
           </span>
         </p>
       </div>
-      <div class="skills mt-5">
-        <h2>Skills</h2>
+      <div class="skills my-5">
+        <h2 class="py-4">Skills</h2>
         <v-layout wrap>
           <template v-for="chip in chips">
             <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
@@ -79,8 +79,8 @@
         </v-layout>
       </div>
 
-      <div class="education mt-5">
-        <h2>Education</h2>
+      <div class="education my-5">
+        <h2 class="py-4">Education</h2>
         <v-layout wrap>
           <template v-for="chip in education">
             <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
@@ -88,8 +88,8 @@
         </v-layout>
       </div>
 
-      <div class="work mt-5 hidden-sm-and-down">
-        <h2>Work</h2>
+      <div class="work my-5 hidden-sm-and-down">
+        <h2 class="py-4">Work</h2>
 
         <a href="https://github.com/mmudge" target="_blank">
           <img src="http://ghchart.rshah.org/mmudge" alt="mmudge's Github chart" />

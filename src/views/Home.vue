@@ -29,10 +29,10 @@
           <p class="line-item line-five">CODE, DESIGN, & SOFTWARE</p>
         </div>
         <v-layout class="mt-5" justify-center wrap>
-          <v-flex xs12 md4>
+          <v-flex xs12 sm6 md6>
             <v-btn to="/about" flat large outline color="blue">Information</v-btn>
           </v-flex>
-          <v-flex xs12 md4>
+          <v-flex xs12 sm6 md6>
             <v-btn to="/portfolio" flat large outline color="red">Portfolio</v-btn>
           </v-flex>
         </v-layout>

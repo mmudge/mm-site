@@ -9,11 +9,9 @@
     </v-img>
 
     <v-card-title primary-title>
-      <div>
-        <h3 class="headline mb-0">{{ name }}</h3>
-        <v-subheader>{{ role }}</v-subheader>
-      </div>
+      <h3 class="headline mb-0">{{ name }}</h3>
     </v-card-title>
+    <v-subheader>{{ role }}</v-subheader>
     <v-card-text>
       <p class="px-3">{{ description }}</p>
     </v-card-text>
