@@ -13,7 +13,7 @@
               :skills_used="project.skills_used"
               :img="project.src"
               :text="project.text"
-              :github_link="project.link"
+              :github_link="project.github_link"
               :link="project.link"
               :youtube_link="project.youtube_link"
             />

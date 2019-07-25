@@ -30,10 +30,10 @@
         </div>
         <v-layout class="mt-5" justify-center wrap>
           <v-flex xs12 sm6 md6>
-            <v-btn to="/about" flat large outline color="blue">Information</v-btn>
+            <v-btn to="/about" flat large outline color="#09fdd9">Information</v-btn>
           </v-flex>
           <v-flex xs12 sm6 md6>
-            <v-btn to="/portfolio" flat large outline color="red">Portfolio</v-btn>
+            <v-btn to="/portfolio" flat large outline color="#2962ff">Portfolio</v-btn>
           </v-flex>
         </v-layout>
       </div>
@@ -105,6 +105,30 @@
       // color: white;
       font-size: 2.5vw;
       font-weight: 400;
+    }
+
+    // 40, 38, 24, 16, 22
+
+    @media (max-width: 480px) {
+      .line-one {
+        font-size: 40px;
+      }
+
+      .line-two {
+        font-size: 38px;
+      }
+
+      .line-three {
+        font-size: 24px;
+      }
+
+      .line-four {
+        font-size: 16px;
+      }
+
+      .line-five {
+        font-size: 22px;
+      }
     }
   }
 
