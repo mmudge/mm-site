@@ -1,7 +1,15 @@
 <template>
-  <v-card style="min-height: 750px; display: flex; flex-direction: column;">
+  <v-card
+    @mouseover="mousingOver()"
+    @mouseleave="mousingOff()"
+    style="min-height: 750px; display: flex; flex-direction: column;"
+  >
     <div style="height: 300px;">
       <v-img aspect-ratio="2.75 " height="300px" :src="img"></v-img>
+    </div>
+
+    <div v-if="hover" class="portfolio-text flex-center">
+      <p style="font-size: 22px;" class="pa-5">{{ text }}</p>
     </div>
 
     <v-card-text style="flex-grow: 1;">
@@ -18,7 +26,7 @@
       </v-chip-group>
     </v-card-text>
 
-    <v-card-actions style="flex-shrink: 1;">
+    <v-card-actions style="flex-shrink: 1; z-index: 1000;">
       <v-spacer></v-spacer>
       <v-btn v-if="github_link" :href="github_link" flat fab>
         <v-icon>fab fa-github</v-icon>
@@ -33,7 +41,29 @@
   </v-card>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.portfolio-text {
+  color: white;
+  background-color: #0d47a1;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  p {
+    position: relative;
+    bottom: -50px;
+    transition: botton 1s ease-in-out;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
 </style>
 
 <script>
@@ -56,12 +86,19 @@ export default {
     Chip
   },
   data() {
-    return {};
+    return {
+      hover: false
+    };
   },
-  mounted() {
-    console.log("skills used prop", this.skills_used);
-    console.log(this.skills);
+  methods: {
+    mousingOver() {
+      this.hover = true;
+    },
+    mousingOff() {
+      this.hover = false;
+    }
   },
+
   computed: {
     skills() {
       let skills = [];
