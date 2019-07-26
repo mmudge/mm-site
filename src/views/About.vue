@@ -9,7 +9,7 @@
           <div class="flex-center">
             <Avatar h="height: 250px;" w="width: 250px;" />
           </div>
-          <div class="flex-center mt-2 hidden-sm-and-down">
+          <div style="display: none" class="flex-center mt-2 hidden-sm-and-down">
             <v-btn color="blue darken-4" flat small outline @click="dialog = !dialog">View Photos</v-btn>
           </div>
         </v-flex>
@@ -59,6 +59,7 @@
           My hobbies are playing with computers, sports, cooking, reading, traveling, chess, fitness, and video games.
           I am currently learning to speak Dutch.
           <span
+            style="display: none;"
             class="hidden-sm-and-down"
           >
             They say pictures are worth a thousand words, so here are some
