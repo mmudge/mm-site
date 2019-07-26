@@ -40,6 +40,7 @@
 <style style="scss" scoped>
 .main-nav {
   font-family: "Comfortaa", cursive;
+  z-index: 10000;
 }
 </style>
 
