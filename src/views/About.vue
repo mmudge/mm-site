@@ -107,24 +107,21 @@
 </template>
 
 <script>
-import Nav from "../components/Nav.vue";
 import Avatar from "../components/Avatar.vue";
 import Social from "../components/Social.vue";
 import ContactInfo from "../components/ContactInfo.vue";
 import Chip from "../components/Chip.vue";
 import Carousel from "../components/Carousel.vue";
-import Footer from "../components/Footer.vue";
+import Api from "../api.js";
 
 export default {
   name: "Home",
   components: {
-    Nav,
     Avatar,
     Social,
     ContactInfo,
     Chip,
-    Carousel,
-    Footer
+    Carousel
   },
   data() {
     return {
@@ -199,6 +196,11 @@ export default {
     socialColor() {
       return "blue darken-4";
     }
+  },
+  mounted() {
+    Api.getGithubEvents().then(response => {
+      console.log(response);
+    });
   }
 };
 </script>
