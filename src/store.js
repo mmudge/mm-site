@@ -11,20 +11,21 @@ export default new Vuex.Store({
         color: "amber lighten-1",
         icon: "fab fa-js-square"
       },
+      vue: { text: "Vue.js", color: "green darken-1", icon: "fab fa-vuejs" },
+      vuetify: {
+        text: "Vuetify",
+        color: "blue darken-1",
+        icon: "fab fa-vuejs"
+      },
+      html: { text: "HTML5", color: "orange darken-4", icon: "fab fa-html5" },
+      css: { text: "CSS3", color: "blue darken-3", icon: "fab fa-css3-alt" },
       rails: {
         text: "Ruby on Rails",
         color: "pink darken-1",
         icon: "fas fa-code"
       },
       ruby: { text: "Ruby", color: "pink darken-2", icon: "fas fa-code" },
-      vue: { text: "Vue.js", color: "green darken-1", icon: "fab fa-vuejs" },
-      html: { text: "HTML5", color: "orange darken-4", icon: "fab fa-html5" },
-      css: { text: "CSS3", color: "blue darken-3", icon: "fab fa-css3-alt" },
-      spa: {
-        text: "SPA's and Web Components",
-        color: "blue-grey darken-1",
-        icon: "fas fa-code"
-      },
+      rspec: { text: "RSpec", color: "pink darken-3", icon: "fas fa-code" },
       git: {
         text: "git",
         color: "deep-orange darken-4",

@@ -129,58 +129,58 @@ export default {
   data() {
     return {
       dialog: false,
-      chips: [
-        {
-          text: "JavaScript",
-          color: "amber lighten-1",
-          icon: "fab fa-js-square"
-        },
-        { text: "Ruby on Rails", color: "pink darken-1", icon: "fas fa-code" },
-        { text: "Ruby", color: "pink darken-2", icon: "fas fa-code" },
-        { text: "Vue.js", color: "green darken-1", icon: "fab fa-vuejs" },
-        { text: "HTML5", color: "orange darken-4", icon: "fab fa-html5" },
-        { text: "CSS3", color: "blue darken-3", icon: "fab fa-css3-alt" },
-        {
-          text: "SPA's and Web Components",
-          color: "blue-grey darken-1",
-          icon: "fas fa-code"
-        },
-        {
-          text: "git",
-          color: "deep-orange darken-4",
-          icon: "fab fa-git-square"
-        },
-        { text: "GitHub", color: "grey darken-3", icon: "fab fa-github" },
-        {
-          text: "GitLab",
-          color: "deep-purple darken-4",
-          icon: "fab fa-gitlab"
-        },
-        {
-          text: "SQL & Database Management",
-          color: "blue darken-2",
-          icon: "fas fa-database"
-        },
-        {
-          text: "Postgresql",
-          color: "indigo darken-4",
-          icon: "fas fa-database"
-        },
-        { text: "Heroku", color: "deep-purple lighten-2", icon: "fas fa-code" },
-        { text: "Figma", color: "yellow darken-3", icon: "fab fa-figma" },
-        { text: "Sketch", color: "orange darken-2", icon: "fab fa-sketch" },
-        { text: "AWS S3", color: "light-blue darken-1", icon: "fab fa-aws" },
-        {
-          text: "MVC Design Pattern",
-          color: "deep-purple",
-          icon: "fas fa-code"
-        },
-        {
-          text: "Scrum & Agile work flows",
-          color: "deep-orange accent-2",
-          icon: "fas fa-code"
-        }
-      ],
+      // chips: [
+      //   {
+      //     text: "JavaScript",
+      //     color: "amber lighten-1",
+      //     icon: "fab fa-js-square"
+      //   },
+      //   { text: "Ruby on Rails", color: "pink darken-1", icon: "fas fa-code" },
+      //   { text: "Ruby", color: "pink darken-2", icon: "fas fa-code" },
+      //   { text: "Vue.js", color: "green darken-1", icon: "fab fa-vuejs" },
+      //   { text: "HTML5", color: "orange darken-4", icon: "fab fa-html5" },
+      //   { text: "CSS3", color: "blue darken-3", icon: "fab fa-css3-alt" },
+      //   {
+      //     text: "SPA's and Web Components",
+      //     color: "blue-grey darken-1",
+      //     icon: "fas fa-code"
+      //   },
+      //   {
+      //     text: "git",
+      //     color: "deep-orange darken-4",
+      //     icon: "fab fa-git-square"
+      //   },
+      //   { text: "GitHub", color: "grey darken-3", icon: "fab fa-github" },
+      //   {
+      //     text: "GitLab",
+      //     color: "deep-purple darken-4",
+      //     icon: "fab fa-gitlab"
+      //   },
+      //   {
+      //     text: "SQL & Database Management",
+      //     color: "blue darken-2",
+      //     icon: "fas fa-database"
+      //   },
+      //   {
+      //     text: "Postgresql",
+      //     color: "indigo darken-4",
+      //     icon: "fas fa-database"
+      //   },
+      //   { text: "Heroku", color: "deep-purple lighten-2", icon: "fas fa-code" },
+      //   { text: "Figma", color: "yellow darken-3", icon: "fab fa-figma" },
+      //   { text: "Sketch", color: "orange darken-2", icon: "fab fa-sketch" },
+      //   { text: "AWS S3", color: "light-blue darken-1", icon: "fab fa-aws" },
+      //   {
+      //     text: "MVC Design Pattern",
+      //     color: "deep-purple",
+      //     icon: "fas fa-code"
+      //   },
+      //   {
+      //     text: "Scrum & Agile work flows",
+      //     color: "deep-orange accent-2",
+      //     icon: "fas fa-code"
+      //   }
+      // ],
       education: [
         {
           text: "University of Arizona",
@@ -198,6 +198,9 @@ export default {
   computed: {
     socialColor() {
       return "blue darken-4";
+    },
+    chips() {
+      return this.$store.state.skill_chips;
     }
   }
 };
