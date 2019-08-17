@@ -27,7 +27,7 @@
         </div>
 
         <v-flex class="pa-2">
-          <div class="professional my-5">
+          <div class="professional mb-5">
             <h2 class="py-4">Professional</h2>
             <p class="about-text">
               Software development is a personal passion of mine. My focus is primarily on full stack web development.
