@@ -1,32 +1,28 @@
 <template>
-  <v-card
-    @mouseover="mousingOver()"
-    @mouseleave="mousingOff()"
-    style="min-height: 750px; display: flex; flex-direction: column;"
-  >
+  <v-card @mouseover="mousingOver()" @mouseleave="mousingOff()" style="min-height: 725px;">
     <div style="height: 300px;">
       <v-img aspect-ratio="2.75 " height="300px" :src="img"></v-img>
     </div>
 
     <div v-if="hover" class="portfolio-text flex-center">
-      <p style="font-size: 22px;" class="pa-5">{{ text }}</p>
+      <p style="font-size: 22px; max-height: 600px; overflow-y: scroll;" class="pa-5">{{ text }}</p>
     </div>
 
-    <v-card-text style="flex-grow: 1;">
+    <v-card-text style="height: 175px;">
       <div style="color: grey">{{role.toUpperCase() }}</div>
       <div class="my-3" style="color: #0d47a1; font-size: 28px; font-weight: bold;">{{name}}</div>
 
       <div style="font-size: 18px;" color="grey darken-3">"{{ description }}"</div>
     </v-card-text>
 
-    <v-card-text style="flex-grow: 1;">
-      <div class="title py-2" style="color: #0d47a1;">Skills Demonstrated:</div>
+    <v-card-text style="max-height: 175px; overflow-y: scroll;">
+      <div class="title py-2" style="color: #0d47a1;">Skills used:</div>
       <v-chip-group v-for="skill in skills" :key="skill.text">
         <Chip :text="skill.text" :color="skill.color" :icon="skill.icon" />
       </v-chip-group>
     </v-card-text>
 
-    <v-card-actions style="flex-shrink: 1; z-index: 1000;">
+    <v-card-actions style="z-index: 1000; position: absolute; bottom: 10px; right: 15px;">
       <v-spacer></v-spacer>
       <v-btn v-if="github_link" :href="github_link" flat fab>
         <v-icon>fab fa-github</v-icon>
@@ -56,7 +52,7 @@
 
   p {
     position: relative;
-    bottom: -50px;
+
     transition: botton 1s ease-in-out;
   }
 

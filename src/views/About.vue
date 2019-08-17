@@ -4,58 +4,36 @@
       <h1 class="mt-5">About me</h1>
       <v-divider class="mb-5"></v-divider>
 
-      <v-layout wrap>
-        <v-flex xs12 sm4 md3>
-          <v-layout justify-center>
-            <v-card class width="100%" style="position: relative;">
-              <v-sheet hidden-sm-and-down style="height: 200px; background-color: #0d47a1;"></v-sheet>
+      <v-layout class="about-layout">
+        <div class="pa-2 mx-auto">
+          <v-card class="mx-5" width="300" style="position: sticky; top: 200px;">
+            <v-sheet style="height: 200px; background-color: #0d47a1;"></v-sheet>
 
-              <v-layout hidden-sm-and-down justify-center>
-                <div style=" position: absolute; top: 75px;">
-                  <Avatar h="height: 250px;" w="width: 250px;" />
-                </div>
-              </v-layout>
-              <v-layout hidden-md-and-up justify-center>
-                <div style="position: absolute; top: 75px;">
-                  <Avatar h="height: 200px;" w="width: 200px;" />
-                </div>
-              </v-layout>
+            <v-layout justify-center style="position: relative;">
+              <div style="position: absolute; top: -125px;">
+                <Avatar h="height: 250px;" w="width: 250px;" />
+              </div>
+            </v-layout>
 
-              <v-card-text style="margin-top: 125px;">
-                <ContactInfo />
-              </v-card-text>
+            <v-card-text style="margin-top: 125px;" class="pa-4">
+              <ContactInfo />
+            </v-card-text>
+            <v-layout justify-center>
               <v-card-actions>
-                <Social :the_color="socialColor" class="mt-3 hidden-md-and-up" />
+                <Social :the_color="socialColor" class="my-3" />
               </v-card-actions>
-            </v-card>
-          </v-layout>
-        </v-flex>
-        <!-- <v-layout align-center wrap class="mt-5 about-header">
-        <v-flex class="py-5" xs12 md6>
-          <div class="flex-center">
-            <Avatar h="height: 250px;" w="width: 250px;" />
-          </div>
-          <div style="display: none" class="flex-center mt-2 hidden-sm-and-down">
-            <v-btn color="blue darken-4" flat small outline @click="dialog = !dialog">View Photos</v-btn>
-          </div>
-        </v-flex>
+            </v-layout>
+          </v-card>
+        </div>
 
-        <v-flex class="py-2" xs12 md6>
-          <h3>Contact Info</h3>
-          <div class="flex-center my-3">
-            <ContactInfo />
-          </div>
-          <Social :the_color="socialColor" class="mt-3 hidden-md-and-up" />
-        </v-flex>
-        </v-layout>-->
-        <v-flex xs12 sm8 md9 class="pa-4">
+        <v-flex class="pa-2">
           <div class="professional my-5">
             <h2 class="py-4">Professional</h2>
             <p class="about-text">
-              Software development is a personal passion of mine. My focus is primarily on full stack web development, however all types of software development interest me.
-              Building websites and web applications is something I thoroughly enjoy from start to finish, from creating a new project folder to deployment.
-              I enjoy both the artistic and design side of the front end, as well as working with data and the more logical side of the back end.
-              The challenge of constantly learning new things keeps as well as finding solutions to difficult problems keeps working with code very fun and exciting to me.
+              Software development is a personal passion of mine. My focus is primarily on full stack web development.
+              Building websites and web applications is something I thoroughly enjoy from start to finish, from creating a new project to deployment.
+              I enjoy working with data on the back end, and bringing that data to life on the front end.
+              The challenge of constantly learning new things keeps as well as finding solutions to difficult problems keeps working with code very fun and exciting.
               That being said, work never feels like work to me but instead more like a passion hobby that I enjoy doing every day.
               The main technologies I use to build project are JavaScript (ES6+),
               Vue.js, and Ruby on Rails 5, skills which I initially learned in 2018 while attending
@@ -70,12 +48,21 @@
               <a
                 class="blue--text"
                 href="https://aeroscan.nl/"
-              >AeroScan</a>, developing 3D real estate inspection software with drones.
+              >AeroScan</a>, developing 3D real estate inspection software.
               We are working with some of the biggest real estate companies in the Netherlands with the goal of making digital inspections a reality.
             </p>
             <p
               class="about-text"
             >I’m always open to new business opportunities. Please feel free to contact me if you would like to have more information.</p>
+          </div>
+
+          <div class="skills my-5">
+            <h2 class="py-4">Skills</h2>
+            <v-layout wrap>
+              <template v-for="chip in chips">
+                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
+              </template>
+            </v-layout>
           </div>
           <div class="personal my-5">
             <h2 class="py-4">Personal</h2>
@@ -97,19 +84,11 @@
               </span>
             </p>
           </div>
-          <div class="skills my-5">
-            <h2 class="py-4">Skills</h2>
-            <v-layout wrap>
-              <template v-for="chip in chips">
-                <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
-              </template>
-            </v-layout>
-          </div>
 
           <div class="education my-5">
             <h2 class="py-4">Education</h2>
             <v-layout wrap>
-              <template v-for="chip in education">
+              <template v-for="chip in edu_chips">
                 <Chip :text="chip.text" :color="chip.color" :icon="chip.icon" :key="chip.text" />
               </template>
             </v-layout>
@@ -152,19 +131,7 @@ export default {
   },
   data() {
     return {
-      dialog: false,
-      education: [
-        {
-          text: "University of Arizona",
-          color: "red darken-2",
-          icon: "fas fa-graduation-cap"
-        },
-        {
-          text: "Le Wagon Coding Bootcamp",
-          color: "red darken-1",
-          icon: "fas fa-code"
-        }
-      ]
+      dialog: false
     };
   },
   computed: {
@@ -173,6 +140,9 @@ export default {
     },
     chips() {
       return this.$store.state.skill_chips;
+    },
+    edu_chips() {
+      return this.$store.state.edu_chips;
     }
   }
 };
@@ -225,6 +195,19 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .about-layout {
+    flex-wrap: wrap;
+
+    > div {
+      .mx-5 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
 }
 </style>
 

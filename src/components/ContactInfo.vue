@@ -18,7 +18,7 @@ export default {
       contactInfo: [
         {
           content: "michaeltmudge@gmail.com",
-          icon: "fas fa-at",
+          icon: "far fa-envelope",
           color: "light-blue darken-1"
         },
         {
@@ -28,12 +28,12 @@ export default {
         },
         {
           content: "+1 (951) 323-1876",
-          icon: "fas fa-flag-usa",
+          icon: "fas fa-phone",
           color: "blue darken-2"
         },
         {
-          content: "Alphen aan den Rijn, Netherlands",
-          icon: "fas fa-map-pin",
+          content: "The Netherlands",
+          icon: "fas fa-location-arrow",
           color: "red darken-1"
         }
       ]

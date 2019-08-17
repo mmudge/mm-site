@@ -61,7 +61,19 @@ export default new Vuex.Store({
         color: "deep-orange accent-2",
         icon: "fas fa-code"
       }
-    }
+    },
+    edu_chips: [
+      {
+        text: "University of Arizona",
+        color: "red darken-2",
+        icon: "fas fa-graduation-cap"
+      },
+      {
+        text: "Le Wagon Coding Bootcamp",
+        color: "red darken-1",
+        icon: "fas fa-code"
+      }
+    ]
   },
   mutations: {},
   actions: {}
