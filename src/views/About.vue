@@ -6,7 +6,7 @@
 
       <v-layout class="about-layout">
         <div class="pa-2 mx-auto">
-          <v-card class="mx-5" width="300" style="position: sticky; top: 125px;">
+          <v-card class="mx-5 about-card" width="300" style>
             <v-sheet style="height: 200px; background-color: #0d47a1;"></v-sheet>
 
             <v-layout justify-center style="position: relative;">
@@ -207,6 +207,18 @@ export default {
         margin-right: 0 !important;
       }
     }
+  }
+}
+
+.about-card {
+  position: sticky;
+  top: 125px;
+}
+
+@media (max-width: 500px) {
+  .about-card {
+    position: static;
+    top: 0;
   }
 }
 </style>
