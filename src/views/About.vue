@@ -215,10 +215,18 @@ export default {
   top: 125px;
 }
 
+.v-sheet {
+  position: sticky;
+}
+
 @media (max-width: 500px) {
   .about-card {
     position: static;
     top: 0;
+  }
+
+  .v-sheet {
+    position: relative;
   }
 }
 </style>
