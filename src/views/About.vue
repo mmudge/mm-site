@@ -148,7 +148,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .about-container {
   h1 {
     color: #0d47a1;
@@ -211,7 +211,7 @@ export default {
 }
 
 .about-card {
-  position: sticky;
+  position: sticky !important;
   top: 125px;
 }
 
@@ -221,7 +221,7 @@ export default {
 
 @media (max-width: 500px) {
   .about-card {
-    position: static;
+    position: static !important;
     top: 0;
   }
 
