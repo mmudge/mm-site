@@ -54,10 +54,6 @@ export default {
 a {
   text-decoration: none;
 }
-
-a:hover {
-  font-weight: bolder;
-}
 </style>
 
 
